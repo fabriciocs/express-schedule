@@ -28,6 +28,5 @@ function remove(uid){
 }
 
 function getAll(nextPageToken) {
-    // List batch of users, 1000 at a time.
     return admin.auth().listUsers(1000, nextPageToken);
   }
