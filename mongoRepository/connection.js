@@ -5,11 +5,4 @@ mongoose.connect('mongodb://localhost:27017/schedule', {
   });
 
 
-var userSchema = new mongoose.Schema({
-    username: String,
-    email: String
-}, {
-    collection: 'usercollection'
-});
-
 module.exports = mongoose;

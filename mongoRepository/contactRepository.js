@@ -6,20 +6,19 @@ var ContactSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-        unique: true,
-        match: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+        unique: true
     },
-    phoneNumber: {
+    name: {
         type: String,
         required: true,
         trim: true,
         unique: true
     },
-    firstName: {
-        type: String
-    },
-    lastName: {
-        type: String
+    phone: {
+        type: String,
+        required: true,
+        trim: true,
+        unique: true
     }
 });
 

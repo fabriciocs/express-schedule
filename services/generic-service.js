@@ -13,9 +13,7 @@ module.exports = function (Repository) {
     };
 
     var update = function (req, res, next) {
-        Repository.findByIdAndUpdate(req.body._id, req.body, {
-            new: true
-        }, function (err, user) {
+        Repository.findOneAndUpdate(req.body._id, req.body, function (err, user) {
             if (err) {
                 next(err);
             } else {
